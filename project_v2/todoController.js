@@ -57,6 +57,10 @@ const todoController = {
       errorHandle(res, 400, "伺服器出錯");
     }
   },
+  deleteTodos(req, res, body) {
+    todos.length = 0;
+    successHandle(res, 200, todos, "刪除成功");
+  },
 };
 
 module.exports = todoController;

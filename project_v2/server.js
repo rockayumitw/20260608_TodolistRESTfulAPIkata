@@ -6,6 +6,8 @@ const routes = {
   "POST /todo": (req, res, body) => todoController.createTodo(req, res, body),
   "PATCH /todo": (req, res, body) => todoController.updateTodo(req, res, body),
   "DELETE /todo": (req, res, body) => todoController.deleteTodo(req, res, body),
+  "DELETE /todos": (req, res, body) =>
+    todoController.deleteTodos(req, res, body),
 };
 
 const requestListener = (req, res) => {
